@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Account Transaction Enquiry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/bootstrap.css" rel="stylesheet">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>
+			<center>
+				<label><U>Account Transaction Enquiry</U></label>
+			</center>
+		</h1>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th>Account Number</th>
+					<th>Account Name</th>
+					<th>Value Date</th>
+					<th>Currency</th>
+					<th>Debit Amount</th>
+					<th>Credit Amount</th>
+					<th>Debit/Credit</th>
+					<th>Transaction Narrative</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="accounts, i : ${transactions}">
+					<td th:id="'accountNumber' + ${i.count}"
+						th:text="${accounts.accountNumber}"></td>
+					<td th:id="'accountName' + ${i.count}"
+						th:text="${accounts.accountName}"></td>
+					<td th:id="'transactionDate' + ${i.count}"
+						th:text="${accounts.transactionDate}"></td>
+					<td th:id="'currencyType' + ${i.count}"
+						th:text="${accounts.currencyType}"></td>
+					<td th:id="'debitAmount' + ${i.count}"
+						th:text="${accounts.debitAmount}"></td>
+					<td th:id="'creditAmount' + ${i.count}"
+						th:text="${accounts.creditAmount}"></td>
+					<td th:id="'transactionType' + ${i.count}"
+						th:text="${accounts.transactionType}"></td>
+					<td th:id="'description' + ${i.count}"
+						th:text="${accounts.description}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="col-md-10 form-group">
+			<div class="row">
+				<a href="/accountsList">Account List Enquiry</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

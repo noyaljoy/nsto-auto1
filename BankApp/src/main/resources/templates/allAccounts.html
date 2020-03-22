@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Account List Enquiry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/bootstrap.css" rel="stylesheet">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>
+			<center>
+				<label><U>Account List Enquiry</U></label>
+			</center>
+		</h1>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th>Account Number</th>
+					<th>Account Name</th>
+					<th>Account Type</th>
+					<th>Balance Date</th>
+					<th>Currency</th>
+					<th>Opening Available Balance</th>
+				</tr>
+			</thead>
+			<tbody>
+
+
+				<tr th:each="account : ${accounts}">
+					<td>
+					<a th:href="${'/transactions/'+account.accountNumber}"><b><span
+						th:text="${account.accountNumber}"></span></b></a>
+					</td>
+					<td th:text="${account.accountName}"></td>
+					<td th:text="${account.accountType}"></td>
+					<td th:text="${account.balanceDate}"></td>
+					<td th:text="${account.currencyType}"></td>
+					<td th:text="${account.balance}"></td>
+				</tr>
+
+			</tbody>
+		</table>
+		<div class="col-md-10 form-group">
+			<div class="row">
+				<a href="/">Home Page</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

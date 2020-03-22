@@ -1,0 +1,30 @@
+insert into Customer (EMAIL,FIRST_NAME,LAST_NAME,phone) values ('noyal.joy@email.com','Noyal', 'Joy','9895306501');
+insert into Customer (EMAIL,FIRST_NAME,LAST_NAME,phone) values ('ee.emmanuel@email.com','EE', 'Emmanuel','9895306502');
+insert into Customer (EMAIL,FIRST_NAME,LAST_NAME,phone) values ('aleander.zion@email.com','Alexander', 'PC','9895306503');
+insert into Customer (EMAIL,FIRST_NAME,LAST_NAME,phone) values ('manju.aleander@email.com','Manju', 'Alexander','9895306504');
+insert into Customer (EMAIL,FIRST_NAME,LAST_NAME,phone) values ('maya.joseph@email.com','Maya', 'Joseph','9895306505');
+insert into Customer (EMAIL,FIRST_NAME,LAST_NAME,phone) values ('Roxan.mendosa@email.com','Roxan', 'Mendosa','9895306506');
+
+insert into Account  (id,ACCOUNT_TYPE,BALANCE,CUSTOMER_ID) values (100001,0,100100.33,1);
+insert into Account  (id,ACCOUNT_TYPE,BALANCE,CUSTOMER_ID) values (100002,1,144009.00,2);
+insert into Account  (id,ACCOUNT_TYPE,BALANCE,CUSTOMER_ID) values (100003,0,12020.00,3);
+insert into Account  (id,ACCOUNT_TYPE,BALANCE,CUSTOMER_ID) values (100004,0,15080.33,4);
+insert into Account  (id,ACCOUNT_TYPE,BALANCE,CUSTOMER_ID) values (100005,1,105660.00,5);
+insert into Account  (id,ACCOUNT_TYPE,BALANCE,CUSTOMER_ID) values (100006,1,120202.00,6);
+
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2019-10-11 19:30:10.68',11000.0,'Mannual Transaction',0,100006);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2019-11-21 19:30:10.68',11000.0,'Mannual Transaction',1,100001);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2019-12-10 13:33:10.68',17500.0,'Mannual Transaction',0,100001);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2019-12-25 13:33:10.68',17500.0,'Mannual Transaction',1,100002);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-01-21 19:30:10.68',13500.0,'Mannual Transaction',0,100003);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-01-28 19:30:10.68',13500.0,'Mannual Transaction',1,100004);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-02-10 13:33:10.68',500.0,'Mannual Transaction',0,100006);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-02-20 13:33:10.68',500.0,'Mannual Transaction',1,100002);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-02-22 19:30:10.68',3000.0,'Mannual Transaction',0,100004);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-02-23 19:30:10.68',3000.0,'Mannual Transaction',1,100003);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-02-24 13:33:10.68',9000.0,'Mannual Transaction',0,100003);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-03-11 13:33:10.68',9000.0,'Mannual Transaction',1,100001);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-03-12 19:30:10.68',18000.0,'Mannual Transaction',0,100002);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-03-15 19:30:10.68',18000.0,'Mannual Transaction',1,100001);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-03-19 13:33:10.68',9500.0,'Mannual Transaction',0,100001);
+insert into Transaction  (DATE,AMOUNT,DESCRIPTION,TRANSACTION_TYPE,ACCOUNT_ID) values ('2020-03-20 13:33:10.68',9500.0,'Mannual Transaction',1,100003);

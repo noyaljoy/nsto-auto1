@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Transfer Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<link rel="stylesheet" type="text/css" href="./css/all.css">
+</head>
+<body>
+	<div class="container my-5">
+		<h1>Fund Transfer</h1>
+		<br>
+		<div class="card">
+			<div class="card-body">
+				<div class="col-md-10">
+					<form action="#" th:action="@{transfer}" th:object=${fundTransfer}
+						method="post">
+						<div class="row form-group">
+							<label>From Account(Debit):</label> <select name="fromAccountId" required="required" class="form-control">
+								<option th:each="account : ${accountList}" 
+									th:value="${account.key}" th:text="${account.value}"
+									 th:field="*{fromAccountId}"/>
+							</select>
+						</div>
+						<div class="row form-group">
+							<label>To Account(Credit):</label> <select name="toAccountId" required="required" class="form-control">
+								<option th:each="account : ${accountList}"  
+									th:value="${account.key}" th:text="${account.value}"
+									 th:field="*{toAccountId}"/>
+							</select>
+						</div>
+						<div class="row form-group">
+							<label>Amount:</label> <input id="amount" name="amount"
+								type="number" th:field="*{amount}" required="required"
+								class="form-control">
+						</div>
+						<div class="row form-group">
+							<label>Description:</label> <input id="description"
+								name="description" type="text" th:field="*{description}"
+								required="required" class="form-control">
+						</div>
+						<input id="transfer" type="submit" value="Transfer"
+							required="required" class="btn btn-primary"> <br>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10 form-group">
+			<div class="row">
+				<a href="/">Home Page</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
