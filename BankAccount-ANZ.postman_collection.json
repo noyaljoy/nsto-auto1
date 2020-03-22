@@ -1,0 +1,148 @@
+{
+	"variables": [],
+	"info": {
+		"name": "BankAccount-ANZ",
+		"_postman_id": "125cc39a-867a-3059-7ee3-618de47869da",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - Fund transfer",
+			"request": {
+				"url": "http://localhost:8074/account/transfer",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fromAccountId\":100000,\n\t\"toAccountId\":100001,\n\t\"amount\":1300.00,\n\t\"description\":\"NJ Tans 1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Account List Enquiry",
+			"request": {
+				"url": "http://localhost:8074/account/list",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get Balance Of Account Number: 100000",
+			"request": {
+				"url": "http://localhost:8074/account/balance/100000",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": " fetch All customer personal details including account details",
+			"request": {
+				"url": "http://localhost:8074/customer/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": " fetch one customer personal details including account details",
+			"request": {
+				"url": "http://localhost:8074/customer/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": " fetch one account details including personal details",
+			"request": {
+				"url": "http://localhost:8074/account/100000",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": " fetch All account details including personal details",
+			"request": {
+				"url": "http://localhost:8074/account/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  account of a customer by Account",
+			"request": {
+				"url": "http://localhost:8074/customer/100000",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": " Create new account for a customer",
+			"request": {
+				"url": "http://localhost:8074/account/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balance\": 100300.33,\n    \"accountType\": \"Savings\",\n    \"customer\": {\n    \t\"email\": \"paul.mark33@wipro.com\",\n    \t\"firstName\": \"Paul\",\n    \t\"lastName\": \"Mark3\",\n    \t\"phone\": \"9895306503\"\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "edit customer details",
+			"request": {
+				"url": "http://localhost:8074/customer/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"email\": \"updated.joy@wipro.com4\",\n        \"firstName\": \"Noyal New\",\n        \"lastName\": \"Joy New\",\n        \"phone\": \"8892618374\",\n        \"account\": {\n              \"accountType\": \"Savings\"\n            }\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
